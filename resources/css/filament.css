@@ -1,0 +1,152 @@
+@import 'tailwindcss';
+
+@import './../../../vendor/filament/filament/resources/css/app.css';
+@import './../../../vendor/filament/filament/resources/css/index.css';
+
+/* ===== Google Fonts ===== */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@300..800&display=swap');
+
+@theme {
+    /* Display font for headings/logo */
+    --font-display: 'Anton', ui-sans-serif, system-ui, sans-serif;
+    /* Body font */
+    --font-sans: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+
+    /* ===== Primary Color Palette (Orange-Red / Gym Feel) ===== */
+    --color-primary-50: #fff3ed;
+    --color-primary-100: #ffe4d4;
+    --color-primary-200: #fec7a9;
+    --color-primary-300: #fea272;
+    --color-primary-400: #fd7a3b;
+    --color-primary-500: #FF6B35;
+    --color-primary-600: #e5551f;
+    --color-primary-700: #be4014;
+    --color-primary-800: #973418;
+    --color-primary-900: #7a2e19;
+
+    /* ===== Warm Light Surface ===== */
+    --color-surface: #F1EFE8;
+
+    /* ===== Dark Mode Base ===== */
+    --color-charcoal: #1A1A1A;
+    --color-charcoal-card: #2C2C2A;
+}
+
+/* ===== Dark Mode Overrides ===== */
+.dark {
+    --fi-body-bg: #1A1A1A !important;
+    --fi-panel-bg: #2C2C2A !important;
+    --fi-widget-bg: #2C2C2A !important;
+}
+
+/* ===== Light Mode Warm Background ===== */
+.fi-body {
+    background-color: #F1EFE8 !important;
+}
+
+/* ===== Display Font Heading Override ===== */
+h1, h2, h3,
+.fi-header-heading,
+.fi-simple-page-heading,
+.fi-login-heading,
+.fi-widget-heading,
+.fi-stats-overview-stat-label,
+.fi-stats-overview-stat .fi-stats-overview-stat-value {
+    font-family: var(--font-display);
+}
+
+/* Body text everywhere */
+body,
+.fi-main,
+.fi-sidebar,
+.fi-ta-content {
+    font-family: var(--font-sans);
+}
+
+/* ===== Stat Widgets: lebih tegas ===== */
+.fi-stats-overview-stat {
+    border-width: 2px !important;
+    border-radius: 0.75rem !important;
+    padding: 1.25rem !important;
+}
+.fi-stats-overview-stat-value {
+    font-size: 2.25rem !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.025em !important;
+}
+.fi-stats-overview-stat-icon-container {
+    border-radius: 0.5rem !important;
+    padding: 0.625rem !important;
+}
+
+/* Stat card border colors using primary-500 */
+.fi-stats-overview-stat {
+    border-color: rgba(255, 107, 53, 0.15);
+}
+.dark .fi-stats-overview-stat {
+    border-color: rgba(255, 107, 53, 0.25);
+}
+
+/* ===== Chart Widget ===== */
+/* Override default chart.js filler blue with orange-transparent */
+canvas {
+    /* Charts inherit Dataset colors from widget config, but if fallback */
+}
+
+/* ===== Sidebar: more spacious ===== */
+.fi-sidebar-nav-groups {
+    gap: 0.5rem !important;
+}
+.fi-sidebar-item {
+    border-radius: 0.625rem !important;
+    margin: 0 0.375rem !important;
+}
+.fi-sidebar-item-icon {
+    width: 1.375rem !important;
+    height: 1.375rem !important;
+}
+.fi-sidebar-item-label {
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+}
+.fi-sidebar-item-active {
+    background-color: rgba(255, 107, 53, 0.12) !important;
+    border-left: 3px solid #FF6B35 !important;
+}
+.dark .fi-sidebar-item-active {
+    background-color: rgba(255, 107, 53, 0.18) !important;
+}
+
+/* ===== Sidebar Group Label ===== */
+.fi-sidebar-group-label {
+    font-family: var(--font-display);
+    font-size: 0.7rem !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    opacity: 0.55 !important;
+}
+
+/* ===== Header / Topbar ===== */
+.fi-topbar {
+    border-bottom-width: 1px !important;
+    border-bottom-color: rgba(255, 107, 53, 0.1) !important;
+}
+.dark .fi-topbar {
+    border-bottom-color: rgba(255, 107, 53, 0.15) !important;
+}
+
+/* ===== Brand / Logo in Sidebar ===== */
+.fi-sidebar-header {
+    border-bottom: 2px solid rgba(255, 107, 53, 0.2) !important;
+    padding-bottom: 0.75rem !important;
+}
+
+/* ===== Performance accent: orange glow on active nav ===== */
+.fi-sidebar-item-active .fi-sidebar-item-icon {
+    color: #FF6B35 !important;
+}
+
+/* ===== Card / Section radius ===== */
+.fi-section, .fi-widget {
+    border-radius: 0.75rem !important;
+}

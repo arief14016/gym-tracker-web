@@ -34,8 +34,8 @@ class WorkoutFrequencyChart extends ChartWidget
                 [
                     'label' => 'Sessions',
                     'data' => $data,
-                    'backgroundColor' => 'rgba(16, 185, 129, 0.5)',
-                    'borderColor' => '#10b981',
+                    'backgroundColor' => 'rgba(255, 107, 53, 0.4)',
+                    'borderColor' => '#FF6B35',
                     'borderWidth' => 1,
                 ],
             ],
