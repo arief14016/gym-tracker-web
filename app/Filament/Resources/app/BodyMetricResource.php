@@ -36,9 +36,10 @@ class BodyMetricResource extends Resource
         return 'Body Metrics';
     }
 
-    public static function form(Schema $schema): Schema
+    
+public static function form(Schema $schema): Schema
     {
-        return $form
+        return $schema
             ->schema([
                 Forms\Components\Section::make('Measurements')
                     ->schema([

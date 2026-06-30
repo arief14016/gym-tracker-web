@@ -35,9 +35,10 @@ class UserManagementResource extends Resource
         return 'User Management';
     }
 
-    public static function form(Schema $schema): Schema
+    
+public static function form(Schema $schema): Schema
     {
-        return $form
+        return $schema
             ->schema([
                 Forms\Components\Section::make('Basic Information')
                     ->schema([

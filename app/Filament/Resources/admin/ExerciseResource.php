@@ -35,9 +35,10 @@ class ExerciseResource extends Resource
         return 'Exercises';
     }
 
-    public static function form(Schema $schema): Schema
+    
+public static function form(Schema $schema): Schema
     {
-        return $form
+        return $schema
             ->schema([
                 Forms\Components\TextInput::make('name')
                     ->required()
