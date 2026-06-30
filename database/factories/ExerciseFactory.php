@@ -1,0 +1,23 @@
+<?php
+
+namespace Database\Factories;
+
+use App\Enums\MuscleGroup;
+use App\Models\Exercise;
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+class ExerciseFactory extends Factory
+{
+    protected $model = Exercise::class;
+
+    public function definition(): array
+    {
+        return [
+            'name' => $this->faker->words(3, true),
+            'muscle_group' => $this->faker->randomElement(MuscleGroup::cases()),
+            'description' => $this->faker->sentence(),
+            'video_url' => null,
+            'image' => null,
+        ];
+    }
+}
